@@ -14,10 +14,10 @@ Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pnam}-%{version}.tar.gz
 # Source0-md5:	8bf851c4864076c3ef0d74c9e5050ba4
 BuildRequires:	gtk+2-devel
-BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	libgnomeui-devel >= 2.0.0
 BuildRequires:	perl-Glib >= 0.95
 BuildRequires:	perl-Gtk2 >= 0.95
-BuildRequires:	libgnomeui-devel >= 2.0.0
+BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -55,6 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS TODO README druid.pl
 %{perl_vendorarch}/%{pnam}.pm
+%dir %{perl_vendorarch}/auto/%{pnam}
 %attr(755,root,root) %{perl_vendorarch}/auto/%{pnam}/*.so
 %{perl_vendorarch}/auto/%{pnam}/*.bs
 %{_mandir}/man3/*
