@@ -24,11 +24,12 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The Gnome2 module allows a perl developer to use the Gnome libraries.
+The Gnome2 Perl module allows a perl developer to use the GNOME 2
+libraries.
 
 %description -l pl
-Modu³ Gnome2 pozwala programistom perlowym na u¿ywanie bibliotek
-¶rodowiska GNOME 2
+Modu³ Perla Gnome2 pozwala programistom perlowym na u¿ywanie bibliotek
+¶rodowiska GNOME 2.
 
 %prep
 %setup -q -n %{pnam}-%{version}
