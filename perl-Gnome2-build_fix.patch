@@ -1,0 +1,21 @@
+diff -aurN Gnome2-0.32.orig/Makefile.PL Gnome2-0.32/Makefile.PL
+--- Gnome2-0.32.orig/Makefile.PL	2003-08-20 03:25:45.000000000 +0200
++++ Gnome2-0.32/Makefile.PL	2003-10-24 22:48:08.204459704 +0200
+@@ -13,7 +13,7 @@
+ # Writing a fake Makefile ensures that CPAN will pick up the correct
+ # dependencies and install them.
+ unless (eval "use ExtUtils::Depends;"
+-           . "use Glib::PkgConfig;"
++           . "use ExtUtils::PkgConfig;"
+            # just seeing if Glib is available isn't enough, make sure
+            # it's recent enough, too 
+            . "use Gtk2 $req_gtk2_ver;"
+@@ -34,7 +34,7 @@
+ # now let's get started on the real work...
+ # in theory, getting what we need to build libgnomeui should 
+ # also get everything we need for libgnome.
+-%pkgcfg = Glib::PkgConfig->find ('libgnomeui-2.0');
++%pkgcfg = ExtUtils::PkgConfig->find ('libgnomeui-2.0');
+ 
+ mkdir 'build', 0777;
+ 
