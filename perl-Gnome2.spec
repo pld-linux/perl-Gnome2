@@ -3,15 +3,15 @@
 %bcond_with tests 	# perform "make test" (requires X server)
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pnam	Gnome2
+%define	pdir	Gnome2
 Summary:	Perl interface to the 2.x series of the GNOME libraries
 Summary(pl):	Interfejs perlowy do bibliotek GNOME 2.x
-Name:		perl-%{pnam}
+Name:		perl-Gnome2
 Version:	1.001
 Release:	1
 License:	LGPL
 Group:		Development/Languages/Perl
-Source0:	http://dl.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/gtk2-perl/%{pdir}-%{version}.tar.gz
 # Source0-md5:	ad0d5949c1089849944e70c45680d43e
 URL:		http://gtk2-perl.sf.net/
 BuildRequires:	gtk+2-devel
@@ -39,7 +39,7 @@ Modu³ Perla Gnome2 pozwala programistom perlowym na u¿ywanie bibliotek
 ¶rodowiska GNOME 2.
 
 %prep
-%setup -q -n %{pnam}-%{version}
+%setup -q -n %{pdir}-%{version}
 
 %build
 %{__perl} Makefile.PL \
@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/%{pnam}/{*,*/*}.pod
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/%{pdir}/{*,*/*}.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -64,9 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
-%dir %{perl_vendorarch}/%{pnam}/Install
-%attr(755,root,root) %{perl_vendorarch}/auto/%{pnam}/*.so
-%{perl_vendorarch}/auto/%{pnam}/*.bs
-%{perl_vendorarch}/%{pnam}/Install/*
-%{perl_vendorarch}/%{pnam}.pm
+%dir %{perl_vendorarch}/%{pdir}/Install
+%attr(755,root,root) %{perl_vendorarch}/auto/%{pdir}/*.so
+%{perl_vendorarch}/auto/%{pdir}/*.bs
+%{perl_vendorarch}/%{pdir}/Install/*
+%{perl_vendorarch}/%{pdir}.pm
 %{_mandir}/man3/*
