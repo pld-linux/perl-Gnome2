@@ -31,7 +31,7 @@ Requires:	perl-Gtk2 >= 1.040
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The Gnome2 Perl module allows a perl developer to use the GNOME 2
+The Gnome2 Perl module allows a Perl developer to use the GNOME 2
 libraries.
 
 %description -l pl
