@@ -15,7 +15,6 @@ Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pnam}-%{version}
 # Source0-md5:	8bf851c4864076c3ef0d74c9e5050ba4
 BuildRequires:	gtk+2-devel
 BuildRequires:	perl-devel >= 5.8.0
-BuildRequires:	perl-ExtUtils-Depends
 BuildRequires:	perl-Glib >= 0.95
 BuildRequires:	perl-Gtk2 >= 0.95
 BuildRequires:	libgnomeui-devel >= 2.0.0
