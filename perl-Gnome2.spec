@@ -9,7 +9,7 @@ Summary(pl):	Interfejs perlowy do bibliotek GNOME 2.x
 Name:		perl-%{pnam}
 Version:	1.00
 Release:	1
-License:	GPL
+License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	http://dl.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
 # Source0-md5:	e749cbfaa828caa50972c1ad7374e9dc
