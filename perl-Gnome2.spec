@@ -4,8 +4,8 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pnam	Gnome2
-Summary:	Perl interface to the 2.x series of the Gnome libraries
-Summary(pl):	Perlowy interfejs do bibliotek GNOME 2.x
+Summary:	Perl interface to the 2.x series of the GNOME libraries
+Summary(pl):	Interfejs perlowy do bibliotek GNOME 2.x
 Name:		perl-%{pnam}
 Version:	1.00
 Release:	1
