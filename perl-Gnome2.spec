@@ -7,12 +7,12 @@
 Summary:	Perl interface to the 2.x series of the Gnome libraries
 Summary(pl):	Perlowy interfejs do bibliotek GNOME 2.x
 Name:		perl-%{pnam}
-Version:	0.92
+Version:	0.93
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://dl.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
-# Source0-md5:	49fb39229a9179b2e3a3af97957c7627
+# Source0-md5:	263d907c861e1dd9992dc3a62c19f2e3
 URL:		http://gtk2-perl.sf.net/
 BuildRequires:	gtk+2-devel
 BuildRequires:	libgnomeui-devel >= 2.0.0
@@ -20,13 +20,13 @@ BuildRequires:	perl-ExtUtils-Depends >= 0.201
 BuildRequires:	perl-ExtUtils-PkgConfig >= 1.03
 BuildRequires:	perl-Glib >= 1.035
 BuildRequires:	perl-Gnome2-Canvas >= 0.92
-BuildRequires:	perl-Gnome2-VFS >= 0.94
+BuildRequires:	perl-Gnome2-VFS >= 0.96
 BuildRequires:	perl-Gtk2 >= 1.021
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Glib >= 1.035
 Requires:	perl-Gnome2-Canvas >= 0.92
-Requires:	perl-Gnome2-VFS >= 0.94
+Requires:	perl-Gnome2-VFS >= 0.96
 Requires:	perl-Gtk2 >= 1.021
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
