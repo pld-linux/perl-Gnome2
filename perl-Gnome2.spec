@@ -7,22 +7,20 @@
 Summary:	Perl interface to the 2.x series of the Gnome libraries
 Summary(pl):	Perlowy interfejs do bibliotek GNOME 2.x
 Name:		perl-%{pnam}
-Version:	0.32
+Version:	0.38
 Release:	0.1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://dl.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
-# Source0-md5:	c284b22b53807ee628c5f2ce8fe273bd
-Patch0:		perl-%{pnam}-build_fix.patch
+# Source0-md5:	d73fc383c94e3a3ce240c40d02726d10
 URL:		http://gtk2-perl.sf.net/
 BuildRequires:	gtk+2-devel
 BuildRequires:	libgnomeui-devel >= 2.0.0
-BuildRequires:	perl-Glib >= 0.95
-BuildRequires:	perl-Gtk2 >= 0.95
-BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	perl-Glib >= 1.012
+BuildRequires:	perl-Gtk2 >= 1.012
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	perl-Gnome2-common
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +33,6 @@ Modu³ Perla Gnome2 pozwala programistom perlowym na u¿ywanie bibliotek
 
 %prep
 %setup -q -n %{pnam}-%{version}
-%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
@@ -58,7 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS TODO README druid.pl
-%{perl_vendorarch}/%{pnam}.pm
+%dir %{perl_vendorarch}/%{pnam}/Install
 %attr(755,root,root) %{perl_vendorarch}/auto/%{pnam}/*.so
 %{perl_vendorarch}/auto/%{pnam}/*.bs
+%{perl_vendorarch}/%{pnam}/Install/*
+%{perl_vendorarch}/%{pnam}.pm
 %{_mandir}/man3/*
