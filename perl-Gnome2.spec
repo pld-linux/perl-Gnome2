@@ -3,7 +3,7 @@
 %bcond_with tests 	# perform "make test" (requires X server)
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Gnome2
+%define		pdir	Gnome2
 Summary:	Perl interface to the 2.x series of the GNOME libraries
 Summary(pl):	Interfejs perlowy do bibliotek GNOME 2.x
 Name:		perl-Gnome2
