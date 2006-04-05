@@ -7,12 +7,12 @@
 Summary:	Perl interface to the 2.x series of the GNOME libraries
 Summary(pl):	Interfejs perlowy do bibliotek GNOME 2.x
 Name:		perl-Gnome2
-Version:	1.023
+Version:	1.040
 Release:	1
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	http://dl.sourceforge.net/gtk2-perl/%{pdir}-%{version}.tar.gz
-# Source0-md5:	d8d60e4b7f7f97d9a0e033ba1c657fee
+# Source0-md5:	0a2dbefaafc5884cbeaf88968ebfe3ad
 URL:		http://gtk2-perl.sf.net/
 BuildRequires:	gtk+2-devel
 BuildRequires:	libgnomeui-devel >= 2.0.0
