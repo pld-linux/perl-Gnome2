@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Gnome2
 Summary:	Perl interface to the 2.x series of the GNOME libraries
-Summary(pl.UTF-8):   Interfejs perlowy do bibliotek GNOME 2.x
+Summary(pl.UTF-8):	Interfejs perlowy do bibliotek GNOME 2.x
 Name:		perl-Gnome2
 Version:	1.040
 Release:	2
