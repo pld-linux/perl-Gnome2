@@ -7,28 +7,29 @@
 Summary:	Perl interface to the 2.x series of the GNOME libraries
 Summary(pl.UTF-8):	Interfejs perlowy do bibliotek GNOME 2.x
 Name:		perl-Gnome2
-Version:	1.040
-Release:	2
+Version:	1.041
+Release:	1
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	http://dl.sourceforge.net/gtk2-perl/%{pdir}-%{version}.tar.gz
-# Source0-md5:	0a2dbefaafc5884cbeaf88968ebfe3ad
+# Source0-md5:	98e169f1d22b69fc48ddf88de2a106f0
 URL:		http://gtk2-perl.sourceforge.net/
-BuildRequires:	gtk+2-devel
+BuildRequires:	libbonoboui-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.14.1
 BuildRequires:	perl-ExtUtils-Depends >= 0.201
 BuildRequires:	perl-ExtUtils-PkgConfig >= 1.03
-BuildRequires:	perl-Glib >= 1.120
+BuildRequires:	perl-Glib >= 1.140
 BuildRequires:	perl-Gnome2-Canvas >= 1.002
 BuildRequires:	perl-Gnome2-VFS >= 1.060
-BuildRequires:	perl-Gtk2 >= 1.121
+BuildRequires:	perl-Gtk2 >= 1.140
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	libbonoboui >= 2.0.0
 Requires:	libgnomeui >= 2.14.1
-Requires:	perl-Glib >= 1.120
+Requires:	perl-Glib >= 1.140
 Requires:	perl-Gnome2-Canvas >= 1.002
 Requires:	perl-Gnome2-VFS >= 1.060
-Requires:	perl-Gtk2 >= 1.121
+Requires:	perl-Gtk2 >= 1.140
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
