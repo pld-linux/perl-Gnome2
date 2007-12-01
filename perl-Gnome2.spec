@@ -7,12 +7,12 @@
 Summary:	Perl interface to the 2.x series of the GNOME libraries
 Summary(pl.UTF-8):	Interfejs perlowy do bibliotek GNOME 2.x
 Name:		perl-Gnome2
-Version:	1.041
+Version:	1.042
 Release:	1
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	http://dl.sourceforge.net/gtk2-perl/%{pdir}-%{version}.tar.gz
-# Source0-md5:	98e169f1d22b69fc48ddf88de2a106f0
+# Source0-md5:	eb7b624114e45e54e022a633ffc1cce6
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	libbonoboui-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.14.1
@@ -58,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/%{pdir}/{*,*/*}.pod
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/Gnome2/{*,*/*}.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -66,9 +66,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
-%dir %{perl_vendorarch}/%{pdir}/Install
-%attr(755,root,root) %{perl_vendorarch}/auto/%{pdir}/*.so
-%{perl_vendorarch}/auto/%{pdir}/*.bs
-%{perl_vendorarch}/%{pdir}/Install/*
-%{perl_vendorarch}/%{pdir}.pm
-%{_mandir}/man3/*
+%dir %{perl_vendorarch}/Gnome2/Install
+%attr(755,root,root) %{perl_vendorarch}/auto/Gnome2/*.so
+%{perl_vendorarch}/auto/Gnome2/*.bs
+%{perl_vendorarch}/Gnome2/Install/*
+%{perl_vendorarch}/Gnome2.pm
+%{_mandir}/man3/Gnome2*.3pm*
