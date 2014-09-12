@@ -69,7 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO
 %dir %{perl_vendorarch}/Gnome2/Install
 %attr(755,root,root) %{perl_vendorarch}/auto/Gnome2/*.so
-%{perl_vendorarch}/auto/Gnome2/*.bs
 %{perl_vendorarch}/Gnome2/Install/*
 %{perl_vendorarch}/Gnome2.pm
 %{_mandir}/man3/Gnome2*.3pm*
