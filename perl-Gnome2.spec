@@ -11,7 +11,7 @@ Version:	1.045
 Release:	1
 License:	LGPL
 Group:		Development/Languages/Perl
-Source0:	http://dl.sourceforge.net/gtk2-perl/%{pdir}-%{version}.tar.gz
+Source0:	http://download.sourceforge.net/gtk2-perl/%{pdir}-%{version}.tar.gz
 # Source0-md5:	95c06139f9d950df17c9cb0340c74168
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	libbonoboui-devel >= 2.0.0
