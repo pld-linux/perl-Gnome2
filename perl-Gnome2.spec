@@ -7,22 +7,25 @@
 Summary:	Perl interface to the 2.x series of the GNOME libraries
 Summary(pl.UTF-8):	Interfejs perlowy do bibliotek GNOME 2.x
 Name:		perl-Gnome2
-Version:	1.045
-Release:	5
-License:	LGPL
+Version:	1.046
+Release:	1
+License:	LGPL v2.1+
 Group:		Development/Languages/Perl
 Source0:	http://download.sourceforge.net/gtk2-perl/%{pdir}-%{version}.tar.gz
-# Source0-md5:	95c06139f9d950df17c9cb0340c74168
+# Source0-md5:	abb820a474237f6c8d6c2dc19ba3c1e6
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	libbonoboui-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.14.1
 BuildRequires:	perl-ExtUtils-Depends >= 0.201
 BuildRequires:	perl-ExtUtils-PkgConfig >= 1.03
-BuildRequires:	perl-Glib >= 1.140
-BuildRequires:	perl-Gnome2-Canvas >= 1.002
-BuildRequires:	perl-Gnome2-VFS >= 1.060
+BuildRequires:	perl-Glib-devel >= 1.140
+BuildRequires:	perl-Gnome2-Canvas-devel >= 1.002
+BuildRequires:	perl-Gnome2-VFS-devel >= 1.060
 BuildRequires:	perl-Gtk2-devel >= 1.140
 BuildRequires:	perl-devel >= 1:5.8.0
+%if %{with tests}
+BuildRequires:	perl-Test-Number-Delta >= 1.0
+%endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	libbonoboui >= 2.0.0
 Requires:	libgnomeui >= 2.14.1
@@ -39,6 +42,24 @@ libraries.
 %description -l pl.UTF-8
 Moduł Perla Gnome2 pozwala programistom perlowym na używanie bibliotek
 środowiska GNOME 2.
+
+%package devel
+Summary:	Development files for Perl Gnome2 bindings
+Summary(pl.UTF-8):	Pliki programistyczne wiązań Gnome2 dla Perla
+Group:		Development/Languages/Perl
+Requires:	%{name} = %{version}-%{release}
+Requires:	libbonoboui-devel >= 2.0.0
+Requires:	libgnomeui-devel >= 2.14.1
+Requires:	perl-Glib-devel >= 1.140
+Requires:	perl-Gnome2-Canvas-devel >= 1.002
+Requires:	perl-Gnome2-VFS-devel >= 1.060
+Requires:	perl-Gtk2-devel >= 1.140
+
+%description devel
+Development files for Perl Gnome2 bindings.
+
+%description devel -l pl.UTF-8
+Pliki programistyczne wiązań Gnome2 dla Perla.
 
 %prep
 %setup -q -n %{pdir}-%{version}
@@ -59,7 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/Gnome2/{*,*/*}.pod
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/Gnome2/{*,*/*}.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -67,8 +88,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS README TODO
-%dir %{perl_vendorarch}/Gnome2/Install
-%attr(755,root,root) %{perl_vendorarch}/auto/Gnome2/*.so
-%{perl_vendorarch}/Gnome2/Install/*
 %{perl_vendorarch}/Gnome2.pm
-%{_mandir}/man3/Gnome2*.3pm*
+%attr(755,root,root) %{perl_vendorarch}/auto/Gnome2/Gnome2.so
+%{_mandir}/man3/Gnome2.3pm*
+%{_mandir}/man3/Gnome2::*.3pm*
+
+%files devel
+%defattr(644,root,root,755)
+%{perl_vendorarch}/Gnome2/Install
