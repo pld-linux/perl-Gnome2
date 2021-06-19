@@ -6,12 +6,12 @@
 Summary:	Perl interface to the 2.x series of the GNOME libraries
 Summary(pl.UTF-8):	Interfejs perlowy do bibliotek GNOME 2.x
 Name:		perl-Gnome2
-Version:	1.047
-Release:	2
+Version:	1.048
+Release:	1
 License:	LGPL v2.1+
 Group:		Development/Languages/Perl
-Source0:	http://download.sourceforge.net/gtk2-perl/%{pdir}-%{version}.tar.gz
-# Source0-md5:	7d52bcc96e5dcd3b2c9b7aa90937c157
+Source0:	https://download.sourceforge.net/gtk2-perl/%{pdir}-%{version}.tar.gz
+# Source0-md5:	38408e8195e86b1dda0704a0054ae5a8
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	libbonoboui-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.14.1
@@ -39,9 +39,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The Gnome2 Perl module allows a Perl developer to use the GNOME 2
 libraries.
 
+Note: this module is deprecated and no longer maintained.
+
 %description -l pl.UTF-8
 Moduł Perla Gnome2 pozwala programistom perlowym na używanie bibliotek
 środowiska GNOME 2.
+
+Uwaga: ten moduł jest przestarzały i nie jest już utrzymywany.
 
 %package devel
 Summary:	Development files for Perl Gnome2 bindings
