@@ -12,6 +12,7 @@ License:	LGPL v2.1+
 Group:		Development/Languages/Perl
 Source0:	https://download.sourceforge.net/gtk2-perl/%{pdir}-%{version}.tar.gz
 # Source0-md5:	38408e8195e86b1dda0704a0054ae5a8
+Patch0:		types.patch
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	libbonoboui-devel >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.14.1
@@ -67,6 +68,7 @@ Pliki programistyczne wiązań Gnome2 dla Perla.
 
 %prep
 %setup -q -n %{pdir}-%{version}
+%patch -P0 -p1
 
 %build
 %{__perl} Makefile.PL \

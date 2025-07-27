@@ -1,0 +1,11 @@
+--- Gnome2-1.048/xs/GnomeAppHelper.xs.orig	2013-09-30 07:22:55.000000000 +0200
++++ Gnome2-1.048/xs/GnomeAppHelper.xs	2025-07-27 16:09:50.746124149 +0200
+@@ -29,7 +29,7 @@
+ 	if (callback) {
+ 		dGPERL_CALLBACK_MARSHAL_SP;
+ #ifdef PERL_IMPLICIT_CONTEXT
+-		PERL_SET_CONTEXT (callback);
++		PERL_SET_CONTEXT ((PerlInterpreter*)callback);
+ 		SPAGAIN;
+ #endif
+ 
